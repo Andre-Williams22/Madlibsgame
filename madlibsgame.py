@@ -59,8 +59,8 @@ while True:
         # the inputs were successfully parsed so we're ready to exit the loop
         pass
     break
-      
-
+    
+# checks length of inputs to make sure the input is long enough 
 if len(adjective) and len(noun) and len(verb) and len(company) < 3:
     print('Sorry one of your words was too short. Please try again.')
 else:
