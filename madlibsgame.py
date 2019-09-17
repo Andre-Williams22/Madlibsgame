@@ -24,6 +24,7 @@ def add_to_story(adjective, adjective2, adjective3, noun, verb, company, pronoun
 # If I want to use regex instead of the try catch method then the code is below
 '''
 while True:
+    
     adjective, adjective2, adjective3 = input('Type 3 Adjectives: ').split()
     noun = input('Type a Verb: ')
     verb = input('Type a Noun: ')
@@ -35,16 +36,18 @@ while True:
     else:
         pass
     break 
+
+    
 '''
 # If I wanted to use Try Catch method instead of regex then the code is below
 while True:
 
     try:
-        adjective, adjective2, adjective3 = input('Type 3 Adjectives: ').split()
+        adjective, adjective2, adjective3 = input('Type 3 Adjectives: ')
        
-        noun = input('Type a Verb: ')
+        noun = input('Type a noun: ')
         
-        verb = input('Type a Noun: ')
+        verb = input('Type a verb: ')
 
         company = input('A Company Name: ')
 
@@ -52,14 +55,14 @@ while True:
 
         add_to_story(adjective, adjective2, adjective3, noun, verb, company, pronoun)
     except ValueError:
-        print("Please try again ...")
-        continue 
+        
+        continue
         
     else:
         # the inputs were successfully parsed so we're ready to exit the loop
         pass
     break
-    
+ 
 # checks length of inputs to make sure the input is long enough 
 if len(adjective) and len(noun) and len(verb) and len(company) < 3:
     print('Sorry one of your words was too short. Please try again.')
